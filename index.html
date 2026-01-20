@@ -12,24 +12,6 @@
         <button type="button" onclick="sprawdztelefon()">SPRAWDŹ</button>
         <p id="wynik"></p>
     </form>
-    <script>
 
-        var wynik = document.getElementById("wynik");
-        var regex1 = /^\d{3}-\d{3}-\d{3}$/
-
-        function sprawdztelefon(){        
-            var numer = document.getElementById("telefon").value;
-            try{
-                if(!regex1.test(numer)){
-                    throw new Error("Niepoprawny numer telefonu! Format XXX-XXX-XXX")
-                }
-                wynik.innerHTML = "Numer telefonu jest poprawny: " + numer
-            }catch(error){
-                console.error("Błąd: " + error.message)
-                wynik.innerHTML = "Błąd: " + error.message
-            }
-            
-        }
-    </script>
 </body>
 </html>
